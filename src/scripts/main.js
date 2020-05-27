@@ -1,13 +1,11 @@
 import * as Game from './game.js';
-import {speak} from './utils.js';
-import {levels} from './config.js';
 
 const readyBtn = document.querySelector(`.button--start`);
 const againBtn = document.querySelector(`.button--end`);
 const introDialog = document.querySelector(`.dialog--intro`);
 const endDialog = document.querySelector(`.dialog--end`);
 
-const found = async (state, level) => {
+const found = (state, level) => {
   if (Game.hasNextLevel()) {
     Game.levelUp();
     Game.start();
@@ -19,7 +17,6 @@ const loop = (state, level, time) => {
 }
 
 const over = () => {
-  console.log('over');
   endDialog.classList.add(`visible`);
 }
 

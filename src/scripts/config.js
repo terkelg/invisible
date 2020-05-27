@@ -1,6 +1,6 @@
 const defaults = {
   hideCursor: false,
-  interval: 1900,
+  interval: 1700,
   pitch: [1, 1],
   rate: [1, 1],
   colder: `Colder`,
@@ -21,8 +21,8 @@ export const levels = [
     ...defaults,
     goal: 0.04,
     goalArea: 0.18,
-    colder: `Colder`,
-    hotter: `Warmer`,
+    colder: `farther`,
+    hotter: `closer`,
     language: `en-GB`,
     click: 'Bloody click it!',
     intro: 'Level 2: Great Britain'
@@ -41,6 +41,8 @@ export const levels = [
     ...defaults,
     goal: 0.02,
     goalArea: 0.20,
+    pitch: [1, 1.2],
+    rate: [1, 1.1],
     language: `en-IN`,
     click: 'Hit it!',
     intro: 'Level 4: Ireland'
@@ -49,13 +51,13 @@ export const levels = [
     ...defaults,
     goal: 0.02,
     goalArea: 0.3,
+    pitch: [1, 1.6],
+    rate: [1, 1.4],
     colder: `kälter`,
     hotter: `Wärmer`,
     language: `de-DE`,
     click: 'Klick jetzt',
     intro: 'Final level: Germany. Hidden cursor.',
-    pitch: [1, 1.6],
-    rate: [1, 1.4],
     hideCursor: true
   },
 ]
